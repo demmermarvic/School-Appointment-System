@@ -1,0 +1,16 @@
+body{
+    padding-top: 50px;
+    padding-left: 95px;
+    background-color: #DFF2EB;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    transition: padding-left 0.3s ease;
+}
+
+@media (max-width: 500px){
+    body{
+        padding-top: 35;
+        padding-left: 25px;
+    }
+}
+

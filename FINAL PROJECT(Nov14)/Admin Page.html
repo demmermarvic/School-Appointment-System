@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/loginPageDesign.css" /> 
+    <link rel="stylesheet" href="styles/generalElements.css" /> 
+    <link rel="stylesheet" href="styles/header.css" /> 
+    <link rel="stylesheet" href="styles/sideBar.css" /> 
+    <link rel="stylesheet" href="styles/announcement-sidebar.css" /> 
+    <link rel="stylesheet" href="styles/documents-sidebar.css">
+    <link rel="stylesheet" href="styles/admin_schedule-sidebar.css">
+    <link rel="stylesheet" href="styles/billing-sidebar.css">
+  
+    <title>
+      San Pablo Integrated School Student Dashboard
+    </title>
+  </head>
+
+  <body>
+
+    <header class="HEADER">
+
+        <img class="spc-logo" src="Assets\Header Icons\SPC Logo.png">
+
+        <h1>SAN PABLO COLLEGES</h1>
+
+        <a class="hamburger-menu">
+           <img src="Assets\Header Icons\hamburger-menu.png">
+        </a>
+         
+    </header>
+
+    <nav class="SIDEBAR">
+      <div class="sideBarContainer">
+        <div class="sideBarContents">
+          
+          <a class="sideBarItem" data-content="content1">
+            <img src="Assets\sideBarIcons\announcement.png">
+          </a>
+
+          <a class="sideBarItem" data-content="content2">
+            <img src="Assets\sideBarIcons\massages.png">
+          </a>
+
+          <a class="sideBarItem" data-content="content3">
+            <img src="Assets\sideBarIcons\calendar.png">
+          </a>
+
+          <a class="sideBarItem" data-content="content4">
+            <img src="Assets\sideBarIcons\document.png">
+          </a>
+
+          <a class="sideBarItem" data-content="content5">
+            <img src="Assets\sideBarIcons\bill.png">
+          </a>
+
+          <a class="sideBarItem" data-content="content7">
+            <img src="Assets\sideBarIcons\user.png">
+          </a>
+
+          <a class="sideBarItem" data-content="content8">
+            <img src="Assets\sideBarIcons\sign-in.png">
+          </a>
+          
+        </div>
+
+        <div class="logoutOption">
+          <a class="logoutLink">
+            <img src="Assets\sideBarIcons\log-out.png">
+          </a>
+        </div>
+      </div>
+
+
+    </nav>
+
+  
+    <div class="content">
+
+      <div id="content1" class="content-item">
+        <h2>Announcement</h2>   
+        <button class="add-announcement-btn"><i class="fa fa-plus"></i>&#43;</button>
+        
+        <div class="content1-container">
+          <div class="announcement-form">
+            <input type="text" id="announcement-title" placeholder="Title">
+            <textarea id="announcement-text" placeholder="Text"></textarea>
+            <input type="checkbox" id="announcement-important">
+            <label class="important-label" for="announcement-important">
+                Important
+            </label>
+            
+            
+            <button id="save-announcement-btn">Add Announcement</button>
+          </div>
+          
+            
+            <div class="main-announcement-container" id="main-announcement-container">
+                <p class="no-announcements">No announcements</p>
+            </div>
+            <div class="side-announcement-container">
+                <div class="side-calendar-container">
+                      
+                </div>
+                <div class="side-moreInfo-container">
+                    more info here
+                </div>
+            </div>
+        </div>
+      </div>
+  
+
+
+      <div id="content2" class="content-item">
+        <h2>Content 2</h2>
+        <p>This is the content for Item 2.</p>
+      </div>
+
+
+
+      <div id="content3" class="content-item">
+        <h2>Schedule/Appointment</h2>
+        <div class="admin-calendar-container">
+            <div class="calendar-header">
+                <button class="admin-nav-btn" id="admin-prev-month">Previous</button>
+                <div class="admin-month-year" id="admin-month-year"></div>
+                <button class="admin-nav-btn" id="admin-next-month">Next</button>
+            </div>
+            <div class="admin-calendar" id="admin-calendar"></div>
+            <div class="admin-summary">
+                Selected Date: <span id="admin-selected-date">None</span>
+            </div>
+        </div>
+
+        <!-- Popup for displaying appointments -->
+        <div class="admin-popup" id="admin-popup">
+            <div class="admin-popup-content">
+                <span class="admin-close-btn">&times;</span>
+                <h3>Appointments for <span id="popup-date"></span></h3>
+                <div class="admin-appointments-list" id="admin-appointments-list">
+                    <!-- Appointments will be displayed here -->
+                </div>
+            </div>
+        </div>
+        
+
+
+      </div>
+
+
+
+
+
+      <div id="content4" class="content-item">
+        <h2>Documents/Files</h2>
+        <div class="documents-container">
+
+            <div class="individual-documment">
+                <h2>Application Form for Humanitarian Scholarship</h2>
+                <div class="download-buttons">
+                  <a class="pdf-download" href="Assets\PDF files\SPC-FO-HS-01_Application Form for Humanitarian Scholarship_Rev. 01.pdf" download="Application Form for Humanitarian Scholarship">
+                    PDF
+                  </a>
+
+                  <a class="document-download" href="Assets\Document files\SPC-FO-HS-01_Application Form for Humanitarian Scholarship_Rev. 01.docx" download="Application Form for Humanitarian Scholarship">
+                    DOC
+                  </a>
+                </div>
+                <div class="file-preview-container">
+                    <object data="Assets\PDF files\SPC-FO-HS-01_Application Form for Humanitarian Scholarship_Rev. 01.pdf" width="100%" height="100%" ></object>
+                </div>
+            </div>
+
+            
+            <div class="individual-documment">
+                <h2>Scholarship Requisition Slip</h2>
+                <div class="download-buttons">
+                  <a class="pdf-download" href="Assets\PDF files\SPC-FO-HS-04_Scholarship Requisition Slip_Rev. 01.pdf" download="Scholarship Requisition Slip">
+                    PDF
+                  </a>
+
+                  <a class="document-download" href="Assets\Document files\SPC-FO-HS-04_Scholarship Requisition Slip_Rev. 01.docx" download="Scholarship Requisition Slip">
+                    DOC
+                  </a>
+                </div>
+                <div class="file-preview-container">
+                    <object data="Assets\PDF files\SPC-FO-HS-04_Scholarship Requisition Slip_Rev. 01.pdf" width="100%" height="100%" ></object>
+                </div>
+            </div>
+
+
+            <div class="individual-documment">
+                <h2>Student Information Updating Form</h2>
+                <div class="download-buttons">
+                  <a class="pdf-download" href="Assets\PDF files\SPC-FO-OGC-01_Student Information Updating Form_Rev. 01.pdf" download="Student Information Updating Form">
+                    PDF
+                  </a>
+
+                  <a class="document-download" href="Assets\Document files\SPC-FO-OGC-01_Student Information Updating Form_Rev. 01.docx" download="Student Information Updating Form">
+                    DOC
+                  </a>
+                </div>
+                <div class="file-preview-container">
+                    <object data="Assets\PDF files\SPC-FO-OGC-01_Student Information Updating Form_Rev. 01.pdf" width="100%" height="100%" ></object>
+                </div>
+            </div>
+
+            
+            <div class="individual-documment">
+                <h2>Student Information Sheet</h2>
+                <div class="download-buttons">
+                  <a class="pdf-download" href="Assets\PDF files\SPC-FO-OGC-02_Student Information Sheet_Rev. 01.pdf" download="Student Information Sheet">
+                    PDF
+                  </a>
+
+                  <a class="document-download" href="Assets\Document files\SPC-FO-OGC-02_Student Information Sheet_Rev. 01.docx" download="Student Information Sheet">
+                    DOC
+                  </a>
+                </div>
+                <div class="file-preview-container">
+                    <object data="Assets\PDF files\SPC-FO-OGC-02_Student Information Sheet_Rev. 01.pdf" width="100%" height="100%" ></object>
+                </div>
+            </div>
+
+
+            <div class="individual-documment">
+                <h2>Request for New  ID</h2>
+                <div class="download-buttons">
+                  <a class="pdf-download" href="Assets\PDF files\SPC-FO-OSD-10_Request for New  ID Rev 01.pdf" download="Request for New  ID">
+                    PDF
+                  </a>
+
+                  <a class="document-download" href="Assets\Document files\SPC-FO-OSD-10_Request for New  ID Rev 01.docx" download="Request for New  ID">
+                    DOC
+                  </a>
+                </div>
+                <div class="file-preview-container">
+                    <object data="Assets\PDF files\SPC-FO-OSD-10_Request for New  ID Rev 01.pdf" width="100%" height="100%" ></object>
+                </div>
+            </div>
+
+
+            <div class="individual-documment">
+                <h2>Adding, Changing, Dropping of Courses Form</h2>
+                <div class="download-buttons">
+                  <a class="pdf-download" href="Assets\PDF files\SPC-FO-REG-04_Adding, Changing, Dropping of Courses Form_Rev. 01.pdf" download="Adding, Changing, Dropping of Courses Form">
+                    PDF
+                  </a>
+
+                  <a class="document-download" href="Assets\Document files\SPC-FO-REG-04_Adding, Changing, Dropping of Courses Form_Rev. 01.docx" download="Adding, Changing, Dropping of Courses Form">
+                    DOC
+                  </a>
+                </div>
+                <div class="file-preview-container">
+                    <object data="Assets\PDF files\SPC-FO-REG-04_Adding, Changing, Dropping of Courses Form_Rev. 01.pdf" width="100%" height="100%" ></object>
+                </div>
+            </div>
+
+
+            <div class="individual-documment">
+                <h2>Consent Form for the Evaluation of Academic Records</h2>
+                <div class="download-buttons">
+                  <a class="pdf-download" href="Assets\PDF files\SPC-FO-REG-09_Consent Form for the Evaluation of Academic Records_Rev. 01.pdf" download="Consent Form for the Evaluation of Academic Records">
+                    PDF
+                  </a>
+
+                  <a class="document-download" href="Assets\Document files\SPC-FO-REG-09_Consent Form for the Evaluation of Academic Records_Rev. 01.docx" download="Consent Form for the Evaluation of Academic Records">
+                    DOC
+                  </a>
+                </div>
+                <div class="file-preview-container">
+                    <object data="Assets\PDF files\SPC-FO-REG-09_Consent Form for the Evaluation of Academic Records_Rev. 01.pdf" width="100%" height="100%" ></object>
+                </div>
+            </div>
+
+
+            <div class="individual-documment">
+                <h2>Request and Claim Slip Form</h2>
+                <div class="download-buttons">
+                  <a class="pdf-download" href="Assets\PDF files\SPC-FO-REG-11_Request and Claim Slip Form_Rev. 01.pdf" download="Request and Claim Slip Form">
+                    PDF
+                  </a>
+
+                  <a class="document-download" href="Assets\Document files\SPC-FO-REG-11_Request and Claim Slip Form_Rev. 01.docx" download="Request and Claim Slip Form">
+                    DOC
+                  </a>
+                </div>
+                <div class="file-preview-container">
+                    <object data="Assets\PDF files\SPC-FO-REG-11_Request and Claim Slip Form_Rev. 01.pdf" width="100%" height="100%" ></object>
+                </div>
+            </div>
+
+
+            <div class="individual-documment">
+                <h2>Evaluation Form for Returnee</h2>
+                <div class="download-buttons">
+                  <a class="pdf-download" href="Assets\PDF files\SPC-FO-REG-17_Evaluation Form for Returnee_Rev. 01.pdf" download="Evaluation Form for Returnee">
+                    PDF
+                  </a>
+
+                  <a class="document-download" href="Assets\Document files\SPC-FO-REG-17_Evaluation Form for Returnee_Rev. 01.docx" download="Evaluation Form for Returnee">
+                    DOC
+                  </a>
+                </div>
+                <div class="file-preview-container">
+                    <object data="Assets\PDF files\SPC-FO-REG-17_Evaluation Form for Returnee_Rev. 01.pdf" width="100%" height="100%" ></object>
+                </div>
+            </div>
+
+            <div class="individual-documment">
+                <h2>Leave of Absence Form</h2>
+                <div class="download-buttons">
+                  <a class="pdf-download" href="Assets\PDF files\SPC-FO-REG-18_Leave of Absence Form_Rev. 01.pdf" download="Leave of Absence Form">
+                    PDF
+                  </a>
+
+                  <a class="document-download" href="Assets\Document files\SPC-FO-REG-18_Leave of Absence Form_Rev. 01.docx" download="Leave of Absence Form">
+                    DOC
+                  </a>
+                </div>
+                <div class="file-preview-container">
+                    <object data="Assets\PDF files\SPC-FO-REG-18_Leave of Absence Form_Rev. 01.pdf" width="100%" height="100%" ></object>
+                </div>
+            </div>
+
+
+            <div class="individual-documment">
+                <h2>Cancellation of Enrollment</h2>
+                <div class="download-buttons">
+                  <a class="pdf-download" href="Assets\PDF files\SPC-FO-REG-21_Cancellation of Enrollment_Rev. 01.pdf" download="Cancellation of Enrollment">
+                    PDF
+                  </a>
+
+                  <a class="document-download" href="Assets\Document files\SPC-FO-REG-21_Cancellation of Enrollment_Rev. 01.docx" download="Cancellation of Enrollment">
+                    DOC
+                  </a>
+                </div>
+                <div class="file-preview-container">
+                    <object data="Assets\PDF files\SPC-FO-REG-21_Cancellation of Enrollment_Rev. 01.pdf" width="100%" height="100%" ></object>
+                </div>
+            </div>
+
+
+            <div class="individual-documment">
+                <h2>Application Form for Shifter and Transferee</h2>
+                <div class="download-buttons">
+                  <a class="pdf-download" href="Assets\PDF files\SPC-FO-REG-12_Application Form for Shifter, Transferee_Rev. 01.pdf" download="Application Form for Shifter and Transferee">
+                    PDF
+                  </a>
+
+                  <a class="document-download" href="Assets\Document files\SPC-FO-REG-12_Application Form for Shifter, Transferee_Rev. 01.docx" download="Application Form for Shifter and Transferee">
+                    DOC
+                  </a>
+                </div>
+                <div class="file-preview-container">
+                    <object data="Assets\PDF files\SPC-FO-REG-12_Application Form for Shifter, Transferee_Rev. 01.pdf" width="100%" height="100%" ></object>
+                </div>
+            </div>
+
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div id="content5" class="content-item">
+        <h2>Billing Management</h2>
+        <div class="billing-container">
+          <div class="billing-header">
+            <div class="date-navigation">
+              <button id="prev-billing-date">←</button>
+              <span id="current-billing-date"></span>
+              <button id="next-billing-date">→</button>
+            </div>
+            <div class="billing-summary">
+              <span>Total Transactions: <span id="total-transactions">0</span></span>
+              <span>Total Amount: ₱<span id="total-amount">0.00</span></span>
+            </div>
+            <button id="show-status-btn" class="status-btn">View Status Report</button>
+          </div>
+          
+          <div class="billing-cards-container" id="billing-cards">
+            <!-- Billing cards will be dynamically inserted here -->
+          </div>
+        </div>
+        <div id="status-popup" class="status-popup">
+            <div class="status-popup-content">
+                <span class="close-status">&times;</span>
+                <div class="status-tabs">
+                    <button class="tab-btn active" data-tab="paid">Paid On Time</button>
+                    <button class="tab-btn" data-tab="missed">Missed Appointments</button>
+                </div>
+                <div class="status-content">
+                    <div id="paid-content" class="tab-content active">
+                        <div class="status-list" id="paid-list"></div>
+                    </div>
+                    <div id="missed-content" class="tab-content">
+                        <div class="status-list" id="missed-list"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+
+      <div id="content7" class="content-item">
+        <h2>Content 3</h2>
+        <p>This is the content for Item 3.</p>
+      </div>
+
+      <div id="content8" class="content-item">
+        <h2>Content 4</h2>
+        <p>This is the content for Item 4.</p>
+      </div>
+
+
+    </div>
+
+    <script src="scripts\sidebar.js"></script>
+
+    <script src="User_calendar.js"></script>
+
+    <script src="scripts\admin_calendar.js"></script>
+
+    <script src="scripts/billing.js"></script>
+
+
+    <script>
+
+      //ADDING AND DELETING ANNOUNCEMENT
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const addAnnouncementBtn = document.querySelector('.add-announcement-btn');
+        const announcementForm = document.querySelector('.announcement-form');
+        const saveAnnouncementBtn = document.getElementById('save-announcement-btn');
+        const mainAnnouncementContainer = document.getElementById('main-announcement-container');
+        const announcementTitle = document.getElementById('announcement-title');
+        const announcementText = document.getElementById('announcement-text');
+        const announcementImportant = document.getElementById('announcement-important');
+
+        let announcements = [];
+
+        function renderAnnouncements() {
+          mainAnnouncementContainer.innerHTML = '';
+          if (announcements.length === 0) {
+            mainAnnouncementContainer.innerHTML = '<p class="no-announcements">No announcements</p>';
+          } else {
+            announcements.forEach((announcement, index) => {
+              const announcementDiv = document.createElement('div');
+              announcementDiv.classList.add('main-announcement-info');
+              if (announcement.important) {
+                announcementDiv.classList.add('important');
+              }
+              announcementDiv.innerHTML = `
+                <h1>${announcement.title}</h1>
+                <hr>
+                <p>${announcement.text}</p>
+                <button class="delete-btn" data-index="${index}">
+                  &times
+                </button>
+              `;
+              mainAnnouncementContainer.appendChild(announcementDiv);
+            });
+          }
+        }
+
+        addAnnouncementBtn.addEventListener('click', () => {
+          announcementForm.style.display = announcementForm.style.display === 'none' || announcementForm.style.display === '' ? 'block' : 'none';
+        });
+
+        saveAnnouncementBtn.addEventListener('click', () => {
+          const title = announcementTitle.value;
+          const text = announcementText.value;
+          const important = announcementImportant.checked;
+          if (title && text) {
+            announcements.unshift({ title, text, important });
+            announcements.sort((a, b) => b.important - a.important || announcements.indexOf(a) - announcements.indexOf(b));
+            renderAnnouncements();
+            announcementForm.style.display = 'none';
+            announcementTitle.value = '';
+            announcementText.value = '';
+            announcementImportant.checked = false;
+          } else {
+            alert('Please fill in both the title and text');
+          }
+        });
+
+        mainAnnouncementContainer.addEventListener('click', (e) => {
+          if (e.target.classList.contains('delete-btn')) {
+            const index = e.target.getAttribute('data-index');
+            announcements.splice(index, 1);
+            renderAnnouncements();
+          }
+        });
+
+        renderAnnouncements();
+      });
+
+    </script>
+
+    <!-- STARTER WINDOW
+      <div class="starterCardHolder">
+      </div>
+    -->
+  </body>
+
+
+</html>

@@ -1,0 +1,309 @@
+body {
+    padding-top: 65px;
+    padding-left: 95px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+}
+
+
+
+.main-container {
+    display: flex;
+    gap: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.calendar-container {
+    width: 70%;
+    min-width: 500px;
+    flex: 3;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.month-year {
+    font-size: 24px;
+    font-weight: 500;
+}
+.button {
+    background-color: #1cb978;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+.day-name {
+    font-weight: 500;
+    color: #888;
+}
+.date {
+    padding: 10px;
+    height: 45px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.date:hover {
+    background-color: #1cb978;
+    color: white;
+}
+
+.date:hover .appointment-count{
+    background-color: white;
+    color: #1cb978;
+}
+
+.date.selected {
+    background-color: #1cb978;
+    color: white;
+}
+.date.full {
+    background-color: #ff7f7f;
+    color: white;
+}
+.date.holiday {
+    background-color: red;
+    color: white;
+    cursor: not-allowed;
+}
+.date.today {
+    border: 2px solid #1cb978;
+    font-weight: bold;
+}
+.summary {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.proceed-button {
+    display: none;
+    margin-top: 20px;
+    background-color: #1cb978;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+
+/*STATUS*/
+.status-box {
+    width: 30%;
+    min-width: 300px;
+    flex: 2;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+}
+
+.status-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+.appointment-info {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+}
+.working-hours {
+    font-size: 16px;
+    color: #444;
+    margin-top: 20px;
+    font-weight: 500;
+}
+.holiday-info {
+    color: red;
+    font-weight: bold;
+}
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 1000;
+    width: 400px;
+    max-width: 90%;
+}
+.popup-container.active {
+    display: block;
+}
+.popup-container .popup-header {
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+    padding-right: 30px;
+}
+.popup-container .popup-header .close-popup {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+.popup-container .popup-body {
+    margin-top: 20px;
+    font-size: 16px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.form-group input[type="radio"],
+.form-group input[type="checkbox"] {
+    width: auto;
+}
+
+.form-group .checkbox-options {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-group .checkbox-options label {
+    margin-right: 10px;
+}
+
+.form-group .checkbox-options input {
+    margin-right: 5px;
+}
+
+.form-group .checkbox-options input[type="checkbox"] {
+    cursor: pointer;
+}
+
+.form-group .checkbox-options label {
+    margin-bottom: 5px;
+}
+
+.submit-btn {
+    background-color: #1cb978;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.submit-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
+
+
+
+
+
+
+
+/*APPOINTMENT*/
+.appointments-list-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    min-width: 150px;
+    flex:1;
+}
+
+
+.appointments-list-container h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#appointments-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#appointments-list li {
+    padding: 10px;
+    background-color: #f1f1f1;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#appointments-list li:hover {
+    background-color: #1cb978;
+    color: white;
+}
+
+
+.appointment-count{
+    background-color: #1cb978;
+    border-radius: 3px;
+    color: white;
+    font-size: 15px;
+    transition: background-color 0.3s, color 0.3s;
+}

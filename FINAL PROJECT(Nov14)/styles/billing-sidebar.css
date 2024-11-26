@@ -1,0 +1,429 @@
+.billing-container {
+  margin-top: 20px;
+  margin-right: 25px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.billing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.date-navigation {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.date-navigation button {
+  padding: 5px 15px;
+  border: none;
+  background-color: #24be21;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.date-navigation button:hover {
+  background-color: #09a01a;
+}
+
+.billing-summary {
+  display: flex;
+  gap: 20px;
+}
+
+.billing-summary span {
+  font-weight: 500;
+}
+
+.billing-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
+.billing-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;position: relative;
+}
+
+.billing-card:hover {
+  transform: translateY(-2px);
+}
+
+.billing-card.current-day {
+  border: 2px solid #24be21;
+}
+
+.billing-card.completed {
+  background-color: #e8f5e9;
+}
+
+.billing-card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.billing-card-header h3 {
+  margin: 0;
+  color: #333;
+}
+
+.billing-details {
+  margin: 10px 0;
+  flex-grow: 1;
+  overflow-y: visible;
+  padding-right: 5px;
+}
+
+.billing-details p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.billing-amount {
+  position: absolute;
+  left: 15px;
+  right: 15px;
+  bottom: 90px;
+  background-color: #e3f5e3;
+  padding: 10px 8px;
+  border-radius: 4px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #24be21;
+  margin: 10px 0;
+}
+
+.billing-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: auto;
+  background: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.billing-actions button {
+  padding: 5px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.complete-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.complete-btn:hover {
+  background-color: #218838;
+}
+
+.cancel-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background-color: #c82333;
+}
+
+.billing-search {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-left: 20px;
+  width: 200px;
+}
+
+.no-transactions {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-style: italic;
+  grid-column: 1 / -1;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.documents-list {
+  background: #f8f9fa;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 10px 0;
+  max-height: 140px;
+  overflow-y: auto;
+}
+
+.documents-list ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 5px 0;
+}
+
+.documents-list li {
+  padding: 3px 0;
+  color: #555;
+}
+
+.program-year {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.transaction-time {
+  font-size: 0.8em;
+  color: #888;
+  text-align: right;
+  margin-top: 10px;
+  border-top: 1px solid #eee;
+  padding-top: 5px;
+  margin-top: auto;
+  background: white;
+  padding-top: 10px;
+}
+
+.billing-card .complete-btn {
+  background-color: #28a745;
+  color: white;
+  font-weight: 500;
+}
+
+.billing-card .cancel-btn {
+  background-color: #dc3545;
+  color: white;
+  font-weight: 500;
+}
+
+.documents-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.document-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.document-item:last-child {
+  border-bottom: none;
+}
+
+.document-name {
+  flex: 1;
+  padding-right: 10px;
+}
+
+.document-fee {
+  font-weight: 500;
+  color: #24be21;
+}
+
+.documents-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.documents-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.documents-list::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+.documents-list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.status-btn {
+    padding: 8px 16px;
+    background-color: #24be21;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.status-btn:hover {
+    background-color: #1ea51b;
+}
+
+.status-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.status-popup-content {
+    position: relative;
+    background-color: white;
+    margin: 50px auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 1000px;
+    max-height: 80vh;
+    border-radius: 8px;
+    overflow-y: auto;
+}
+
+.close-status {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.status-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.tab-btn.active {
+    background-color: #24be21;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.status-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.status-card.missed {
+    border-left: 4px solid #dc3545;
+}
+
+.status-card.paid {
+    border-left: 4px solid #28a745;
+}
+
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+.status-badge.paid {
+    background-color: #28a745;
+    color: white;
+}
+
+.status-badge.missed {
+    background-color: #dc3545;
+    color: white;
+}
+
+.status-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.status-documents {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+.status-documents ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 5px 0;
+}
+
+.status-documents li {
+    padding: 3px 0;
+    color: #555;
+}
+
+.status-search {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.disabled {
+    pointer-events: none;
+    background-color: #f5f5f5;
+    color: #ccc;
+}
+
+.appointment-count {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background-color: #24be21;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.full .appointment-count {
+    background-color: #dc3545;
+}

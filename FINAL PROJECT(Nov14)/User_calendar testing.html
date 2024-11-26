@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Realistic Full Year Calendar Booking with Holidays</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="User_schedule-sidebar.css">
+    
+
+</head>
+<body>
+    <div class="main-container">
+        <div class="calendar-container">
+            <div class="header">
+                <button class="button" id="prev-month">Previous</button>
+                <div class="month-year" id="month-year"></div>
+                <button class="button" id="next-month">Next</button>
+            </div>
+            <div class="calendar" id="calendar"></div>
+            <div class="summary">
+                Selected Date: <span id="selected-date">None</span>
+            </div>
+            <button class="proceed-button" id="proceed-button">Proceed</button>
+        </div>
+
+        <div class="status-box">
+            <div class="status-title">Scheduled Status</div>
+            <div id="appointment-info" class="appointment-info">No appointments scheduled.</div>
+            <div id="working-hours" class="working-hours">
+                Working Hours: 7:00 AM - 12:00 PM, 1:00 PM - 5:00 PM
+            </div>
+            <div id="holiday-info" class="holiday-info"></div>
+            <button class="button" id="next-button" style="display: none;">Next</button>
+        </div>
+
+        <div class="appointments-list-container">
+            <h3>Scheduled Appointments</h3>
+            <ul id="appointments-list">
+            </ul>
+        </div>
+    </div>
+
+    <div class="popup-container" id="popup-container">
+        <div class="popup-header">
+            Scheduled Appointments
+            <button class="close-popup" id="close-popup">X</button>
+        </div>
+        <div class="popup-body">
+            <form id="appointment-form">
+                <div class="form-group">
+                    <label for="full-name">Full Name (Surname, First Name, Middle Initial)</label>
+                    <input type="text" id="full-name" name="full-name" placeholder="Enter Full Name" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="program">Program</label>
+                    <input type="text" id="program" name="program" placeholder="Enter Full Program Name" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="contact-number">Contact Number</label>
+                    <input type="text" id="contact-number" name="contact-number" placeholder="Enter Contact Number" required pattern="\d{11}" />
+                    <small>Format: 11 digits</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="year-level">Year Level</label>
+                    <select id="year-level" name="year-level" required>
+                        <option value="1st year">1st Year</option>
+                        <option value="2nd year">2nd Year</option>
+                        <option value="3rd year">3rd Year</option>
+                        <option value="4th year">4th Year</option>
+                        <option value="5th year">5th Year</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Type of Documentation</label>
+                    <div class="checkbox-options">
+                        <label><input type="checkbox" name="documentation" value="Diploma (₱400.00)" /> Diploma (₱400.00)</label>
+                        <label><input type="checkbox" name="documentation" value="Certificate of Transfer Credentials (₱100.00)" /> Certificate of Transfer Credentials (₱100.00)</label>
+                        <label><input type="checkbox" name="documentation" value="Form 137 (₱100.00)" /> Form 137 (₱100.00)</label>
+                        <label><input type="checkbox" name="documentation" value="Certification (₱30.00)" /> Certification (₱30.00)</label>
+                        <label><input type="checkbox" name="documentation" value="Transcript of Records (₱50.00 per page)" /> Transcript of Records (₱50.00 per page)</label>
+                        <label><input type="checkbox" name="documentation" value="Authentication (₱20.00 per page)" /> Authentication (₱20.00 per page)</label>
+                        <label><input type="checkbox" name="documentation" value="Send Copy of Registration Form (₱15.00)" /> Send Copy of Registration Form (₱15.00)</label>
+                        <label><input type="checkbox" name="documentation" value="Graduation Fee (₱1,000.00)" /> Graduation Fee (₱1,000.00)</label>
+                        <label><input type="checkbox" name="documentation" value="Others, Please Specify" /> Others, Please Specify</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        
+        </div>
+    </div>
+
+
+    <script src="User_calendar.js"></script>
+
+    <a href="Admin Page.html">Admin page</a>
+
+
+
+       
+</body>
+</html>
